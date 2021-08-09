@@ -1,6 +1,4 @@
 #include <GLFW/glfw3.h>
-#include <check.h>
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -18,8 +16,6 @@ main (int argc, char *argv[argc + 1])
       glfwTerminate ();
       exit (EXIT_FAILURE);
     }
-  printf ("wow\n");
-  printf ("%s%d\n", "best", 10);
   /* Make the window's context current */
   glfwMakeContextCurrent (window);
 
@@ -39,9 +35,3 @@ main (int argc, char *argv[argc + 1])
   glfwTerminate ();
   exit (EXIT_SUCCESS);
 }
-
-START_TEST (glfw_init_test)
-{
-  ck_assert (glfwCreateWindow (10, 10, "good", 0, 0));
-}
-END_TEST
